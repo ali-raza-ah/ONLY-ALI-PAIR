@@ -14,9 +14,8 @@ const upload = (data, name) => {
 
         const storage = new Storage(auth);
 
-        // Wait for storage to be fully ready
         storage.on('ready', () => {
-            const uploader = storage.upload({ name });
+            const uploader = storage.upload({ name, allowUploadBuffering: true }); // ✅ Fixed here
 
             uploader.on('complete', file => {
                 file.link((err, url) => {

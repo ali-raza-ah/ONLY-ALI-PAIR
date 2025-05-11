@@ -8,14 +8,22 @@ const MESSAGE = process.env.MESSAGE || `
 *SESSION GENERATED SUCCESSFULY* ✅
 
 *🌟 Join the official channel for more courage, updates, and support!* 🌟
+https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
 
+*Ask me any question Here* 
 
-*Ask me any question Here* 💭
+ngl.link/septorch
+
+Instagram: instagram.com/septorch29
+
+TikTok: tiktok.com/@septorch
+
 
 I will answer your question on the channel 
+https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
 
 
-*SEPTORCH--WHATTSAPP-BOT* 🥀
+*SEPTORCH--WHATTSAPP-BOT*
 `;
 
 const { upload } = require('./mega');

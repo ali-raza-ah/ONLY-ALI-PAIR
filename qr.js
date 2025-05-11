@@ -16,9 +16,19 @@ const MESSAGE = process.env.MESSAGE ||  `
 *SESSION GENERATED SUCCESSFULY* ✅
 
 *🌟 Join the official channel for more courage, updates, and support!* 🌟
+https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
 
 
 *Ask anything here* 💭
+ngl.link/septorch
+
+
+Instagram: instagram.com/septorch29
+
+
+TikTok: tiktok.com/@septorch
+
+
 
 I will reply on the channel
 

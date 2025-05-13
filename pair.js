@@ -5,25 +5,22 @@ let router = express.Router();
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
 const MESSAGE = process.env.MESSAGE || `
-*SESSION GENERATED SUCCESSFULY* ✅
-
-*🌟 Join the official channel for more courage, updates, and support!* 🌟
-https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
-
-*Ask me any question Here* 
-
-ngl.link/septorch
-
-Instagram: instagram.com/septorch29
-
-TikTok: tiktok.com/@septorch
-
-
-I will answer your question on the channel 
-https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
-
-
-*SEPTORCH--WHATTSAPP-BOT*
+> *CONNECTED SUCCESSFULLY ✅*
+╭────「 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 」────◆
+│ *ʏᴏᴜᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀsᴛ sᴛᴇᴘ*
+│ *ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ.𓆈*
+│─────────────────────
+│ *∘ ᴄʜᴀɴɴᴇʟ:*
+│ *∘ https://tinyurl.com/26qonxcy*
+│─────────────────────
+│ *∘ ᴏᴡɴᴇʀ:*
+│ *∘ https://tinyurl.com/24ac6the*
+│─────────────────────
+│  *∘ ʀᴇᴘᴏ:*
+│  *∘  https://tinyurl.com/27mtrkul*
+│─────────────────────
+│ *∘ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ ᴍᴀᴅᴇ ᴡɪᴛʜ ʟᴏᴠᴇ*
+╰─────────────────────
 `;
 
 const { upload } = require('./mega');

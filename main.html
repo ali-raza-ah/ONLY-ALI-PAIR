@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glow UI</title>
+  <meta charset="UTF-8">
+  <title>VENOCYBERMDSession</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       display: flex;
       flex-direction: column;
@@ -16,123 +12,80 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      background-size: 300% 300%;
-      animation: gradientBG 12s ease infinite;
-      overflow: hidden;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    h1 {
-      color: #00ffc8;
-      font-size: 3.5rem;
-      margin-bottom: 50px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8, 0 0 30px #00ffc8;
-      }
-      to {
-        text-shadow: 0 0 20px #00ffe5, 0 0 40px #00ffe5, 0 0 60px #00ffe5;
-      }
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      background-color: blue;
     }
 
     .btn {
-      width: 260px;
-      padding: 16px 28px;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-weight: bold;
-      border: 2px solid #00ffc8;
-      border-radius: 30px;
-      background: transparent;
-      color: #ffffff;
-      cursor: pointer;
+      --color: #e5f5f1;
+      --color2: rgb(0, 0, 0);
+      width: 200px;
+      padding: 0.8em 1.75em;
+      background-color: red;
+      border-radius: 6px;
+      border: .3px solid var(--color);
+      transition: .5s;
       position: relative;
       overflow: hidden;
-      transition: 0.4s ease;
-      box-shadow: 0 0 10px #00ffc8;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 300;
+      font-size: 17px;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 24px;
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: .5s ease-out;
+      background-color: var(--color);
     }
 
     .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 255, 200, 0.2);
-      transition: 0.5s;
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
     }
 
     .btn:hover::before {
-      left: 0;
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
     }
 
     .btn:hover {
-      background: #00ffc8;
-      color: #002b2e;
-      box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8;
-      transform: scale(1.05);
+      color: var(--color2);
     }
 
     .btn:active {
-      transform: scale(0.98);
-      box-shadow: 0 0 10px #00ffc8;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.3rem;
-      }
-
-      .btn {
-        width: 80%;
-        font-size: 16px;
-        padding: 12px 20px;
-      }
+      filter: brightness(.7);
+      transform: scale(.98);
     }
   </style>
 </head>
 <body>
-
-  <h1>Choose Your Action</h1>
-
-  <div class="container">
-    <button onclick="window.open('/qr', '_self')" class="btn">QR Code</button>
-    <button onclick="window.open('/pair', '_self')" class="btn">Pair Code</button>
-    <button onclick="window.open('https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04', '_blank')" class="btn">WhatsApp</button>
-  </div>
+ Hello 👋 There and welcome to  VENOCYBER MD 🚘🚘🧚
+ <button onclick="window.open(`https://venocyber-md-qr.onrender.com`)" class="btn">QR Code</button>
+  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
+  <button onclick="window.open(`https://github.com/kingjux/Venocyber-md`)" class="btn">Bot Repo</button>
+  <button onclick="window.open(`https://github.com/Kingjux/Venocyber-md-plugins`)" class="btn">Plugins</button>
+  <button onclick="window.open(`https://wa.me/message/A4QG2JZKBXFTN1`)" class="btn">Contact Me</button>
+  <button onclick="window.open(`https://chat.whatsapp.com/HSln3blDuuuKvC8njxyCCN`)" class="btn">Wa Group</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l`)" class="btn">Wa Channel</button>
+  <button onclick="window.open(`https://instagram.com/venoflix2024`)" class="btn">Instagram</button>
+  <button onclick="window.open(`https://youtube.com/@JASTINMTEWA-vn9pl`)" class="btn">Youtube</button>
+  
 
 </body>
 </html>

@@ -2,90 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VENOCYBERMDSession</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/x-icon">
   <style>
     body {
+      background-color: black;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: blue;
+      color: white;
     }
 
-    .btn {
-      --color: #e5f5f1;
-      --color2: rgb(0, 0, 0);
-      width: 200px;
-      padding: 0.8em 1.75em;
+    {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://railway.app",
+            "logo": "https://files.catbox.moe/eqctpl.jpg"
+    }
+
+    .button-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      margin-top: -40px;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    .button {
+      width: 140px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
       background-color: red;
-      border-radius: 6px;
-      border: .3px solid var(--color);
-      transition: .5s;
+      border-radius: 10px;
+      border: none;
+      color: white;
       position: relative;
-      overflow: hidden;
       cursor: pointer;
-      z-index: 1;
-      font-weight: 300;
-      font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      text-transform: uppercase;
-      color: var(--color);
-      margin-bottom: 24px;
+      font-weight: 900;
+      transition-duration: .2s;
+      background: linear-gradient(0deg, #000, #272727);
+      text-decoration: none;
     }
 
-    .btn::after, .btn::before {
+  
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Darker gray footer background */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    
+  }
+    .button:before, .button:after {
       content: '';
-      display: block;
-      height: 100%;
-      width: 100%;
-      transform: skew(90deg) translate(-50%, -50%);
       position: absolute;
-      inset: 50%;
-      left: 25%;
+      left: -2px;
+      top: -2px;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
       z-index: -1;
-      transition: .5s ease-out;
-      background-color: var(--color);
+      animation: steam 10s linear infinite;
     }
 
-    .btn::before {
-      top: -50%;
-      left: -25%;
-      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
     }
 
-    .btn:hover::before {
-      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    .button:after {
+      filter: blur(50px);
     }
 
-    .btn:hover::after {
-      transform: skew(45deg) translate(-50%, -50%);
+    .button span {
+      z-index: 1;
     }
 
-    .btn:hover {
-      color: var(--color2);
-    }
-
-    .btn:active {
-      filter: brightness(.7);
-      transform: scale(.98);
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
- Hello 👋 There and welcome to  VENOCYBER MD 🚘🚘🧚
- <button onclick="window.open(`https://venocyber-md-qr.onrender.com`)" class="btn">QR Code</button>
-  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
-  <button onclick="window.open(`https://github.com/kingjux/Venocyber-md`)" class="btn">Bot Repo</button>
-  <button onclick="window.open(`https://github.com/Kingjux/Venocyber-md-plugins`)" class="btn">Plugins</button>
-  <button onclick="window.open(`https://wa.me/message/A4QG2JZKBXFTN1`)" class="btn">Contact Me</button>
-  <button onclick="window.open(`https://chat.whatsapp.com/HSln3blDuuuKvC8njxyCCN`)" class="btn">Wa Group</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VaYauR9ISTkHTj4xvi1l`)" class="btn">Wa Channel</button>
-  <button onclick="window.open(`https://instagram.com/venoflix2024`)" class="btn">Instagram</button>
-  <button onclick="window.open(`https://youtube.com/@JASTINMTEWA-vn9pl`)" class="btn">Youtube</button>
-  
+  <div class="button-container">
+    <h3>REGARDS BY ALI 👻</h3>
+      <div></div>
+    <a href="/pair" class="button" target="_blank"> <span>PAIR-CODE</span> </a> <br>
+     <a href="/qr" class="button" target="_blank"> <span>QR-CODE</span> </a> <br>
+    <a href="https://github.com/itx-alii-raza/ALI-MD/fork" class="button" target="_blank"> <span>REPO-FORK </span> </a> <br> </a>
+    <a href="https://dashboard.heroku.com/new?template=https://github.com/itx-alii-raza/ALI-MD" class="button" target="_blank"> <span>HEROKU-DEPLOY</span> </a> <br>
+    <a href="https://whatsapp.com/channel/0029VaoRxGmJpe8lgCqT1T2h" class="button" target="_blank"> <span>WHATSAPP</span> </a> <br>
+    <a href="https://ali-web-rho.vercel.app/" class="button" target="_blank"> <span>ALI-INFO</span> </a> <br>   
+      
 
+    <footer>ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ.ᴀʟɪ 👀🌎 &copy; <span id="currentYear"></span>
+    </footer>
+  
 </body>
 </html>

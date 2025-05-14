@@ -4,8 +4,7 @@ const { exec } = require("child_process");
 let router = express.Router();
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
-const MESSAGE = process.env.MESSAGE || `
-> *CONNECTED SUCCESSFULLY ✅*
+const MESSAGE = process.env.MESSAGE || `> *CONNECTED SUCCESSFULLY ✅*
 ╭────「 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 」────◆
 │ *ʏᴏᴜᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀsᴛ sᴛᴇᴘ*
 │ *ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ.𓆈*
@@ -56,7 +55,7 @@ router.get('/', async (req, res) => {
 
             if (!Smd.authState.creds.registered) {
                 await delay(1500);
-                num = num.replace(/[^0-9]/g, '');
+                num = num.replace(/[^0-9]/g, 'STARK-ALI');
                 const code = await Smd.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });

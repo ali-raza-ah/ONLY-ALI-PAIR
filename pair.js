@@ -55,7 +55,7 @@ router.get('/', async (req, res) => {
 
             if (!Smd.authState.creds.registered) {
                 await delay(1500);
-                num = num.replace(/[^0-9]/g, 'STARK-ALI');
+                num = num.replace(/[^0-9]/g, '');
                 const code = await Smd.requestPairingCode(num);
                 if (!res.headersSent) {
                     await res.send({ code });
@@ -89,7 +89,7 @@ router.get('/', async (req, res) => {
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
                         const Id_session = mega_url.replace('https://mega.nz/file/', '');
 
-                        const sid = "STARK-ALI~" + Id_session;
+                        const Scan_Id = "STARK-ALI~" + Id_session;
 
                         let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });

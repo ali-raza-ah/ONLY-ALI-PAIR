@@ -12,28 +12,22 @@ const fs = require("fs-extra");
 
 const { Boom } = require("@hapi/boom");
 
-const MESSAGE = process.env.MESSAGE ||  `
-*SESSION GENERATED SUCCESSFULY* ✅
-
-*🌟 Join the official channel for more courage, updates, and support!* 🌟
-https://whatsapp.com/channel/0029Vb1ydGk8qIzkvps0nZ04
-
-
-*Ask anything here* 💭
-ngl.link/septorch
-
-
-Instagram: instagram.com/septorch29
-
-
-TikTok: tiktok.com/@septorch
-
-
-
-I will reply on the channel
-
-
-*SEPTORCH--WHATTSAPP-BOT*
+const MESSAGE = process.env.MESSAGE ||  `> *CONNECTED SUCCESSFULLY ✅*
+╭────「 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 」────◆
+│ *ʏᴏᴜᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀsᴛ sᴛᴇᴘ*
+│ *ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ.𓆈*
+│─────────────────────
+│ *∘ ᴄʜᴀɴɴᴇʟ:*
+│ *∘ https://tinyurl.com/26qonxcy*
+│─────────────────────
+│ *∘ ᴏᴡɴᴇʀ:*
+│ *∘ https://tinyurl.com/24ac6the*
+│─────────────────────
+│  *∘ ʀᴇᴘᴏ:*
+│  *∘  https://tinyurl.com/27mtrkul*
+│─────────────────────
+│ *∘ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ ᴍᴀᴅᴇ ᴡɪᴛʜ ʟᴏᴠᴇ*
+╰─────────────────────
 `
 
 
@@ -182,7 +176,7 @@ if (fs.existsSync('./auth_info_baileys')) {
 
 
 
-                        const Scan_Id = string_session;
+                        const Scan_Id = "STARK-ALI~" + Id_session;
 
           console.log(`
 

@@ -1,41 +1,36 @@
-const { Storage } = require("megajs");
+const mega = require("megajs");
 
 const auth = {
-    email: 'jakejasons580@gmail.com',
-    password: 'Septorch111$$.',
+    email: 'feranmiwole@yahoo.com',   //use your real vaild mega account email
+    password: '.gpajtdmw',  ////use your real vaild mega account password
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
 };
 
 const upload = (data, name) => {
     return new Promise((resolve, reject) => {
-        if (!auth.email || !auth.password || !auth.userAgent) {
-            return reject(new Error("Missing required authentication fields"));
-        }
+        try {
+            if (!auth.email || !auth.password || !auth.userAgent) {
+                throw new Error("Missing required authentication fields");
+            }
 
-        const storage = new Storage(auth);
+            console.log("Using auth:", auth); // Debugging line
 
-        storage.on('ready', () => {
-            const uploader = storage.upload({ name, allowUploadBuffering: true }); // ✅ Fixed here
-
-            uploader.on('complete', file => {
-                file.link((err, url) => {
-                    storage.close();
-                    if (err) return reject(err);
-                    resolve(url);
+            const storage = new mega.Storage(auth, () => {
+                data.pipe(storage.upload({ name: name, allowUploadBuffering: true }));
+                storage.on("add", (file) => {
+                    file.link((err, url) => {
+                        if (err) {
+                            reject(err);
+                            return;
+                        }
+                        storage.close();
+                        resolve(url);
+                    });
                 });
             });
-
-            uploader.on('error', err => {
-                storage.close();
-                reject(err);
-            });
-
-            data.pipe(uploader);
-        });
-
-        storage.on('error', err => {
+        } catch (err) {
             reject(err);
-        });
+        }
     });
 };
 
